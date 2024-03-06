@@ -26,7 +26,9 @@ function Bio() {
         <div className="flex flex-col mobile:w-full tablet:w-full desktop:w-[40%] justify-around gap-[15px]">
           <div>"I enjoy learning and building cool things. I value personal growth, integrity and open communication."</div>
           <div>
-            <div>{getAge()} years old</div>
+            {/* TODO find fix for parsing date issue with ios */}
+            {/* <div>{getAge()} years old</div> */}
+            <div>38 years old</div>
             <div>{address.city},</div>
             <div>{address.state},</div>
             <div>{address.country}</div>
@@ -36,9 +38,6 @@ function Bio() {
       </div>
       <div>
         <span className="font-bold">Mood:</span> productive
-        <div>
-          View My: <span className="text-dark-blue font-bold">Pics</span> | <span className="text-dark-blue font-bold">Videos</span>
-        </div>
       </div>
     </div>
   )

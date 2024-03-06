@@ -8,7 +8,7 @@ import Profile from "./components/Profile";
 
 function App() {
   return (
-    <div className="mobile:max-w-[none] tablet:max-w-[none] desktop:max-w-[1200px] mobile:px-none tablet:px-none desktop:px-8 mx-auto">
+    <div className="mobile:max-w-full tablet:max-w-full desktop:max-w-[1200px] mobile:px-none tablet:px-none desktop:px-8 mx-auto">
       <NavBar />
       <Profile />
     </div>

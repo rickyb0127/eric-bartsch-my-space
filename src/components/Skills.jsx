@@ -15,7 +15,7 @@ import postgres from '../assets/images/logos/postgresql-logo.png';
 import ruby from '../assets/images/logos/ruby-logo.png';
 import sequelize from '../assets/images/logos/sequelize-logo.png';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Skills() {
   const skillsList = [
@@ -85,7 +85,15 @@ function Skills() {
     }
   ];
 
-  const initialDisplayedSkills = skillsList.slice(0, 8);
+  const getDisplayedSkills = () => {
+    if(window.innerWidth < 800) {
+      return skillsList.slice(0, 9);
+    } else {
+      return skillsList.slice(0, 8);
+    }
+  }
+
+  const initialDisplayedSkills = getDisplayedSkills();
   const [displayedSkillsList, setDisplayedSkillsList] = useState(initialDisplayedSkills);
   const [showAllSkills, setShowAllSkills] = useState(false);
 
@@ -114,7 +122,7 @@ function Skills() {
           <span>]</span>
         </div>
       </div>
-      <div className="grid grid-rows-2 grid-cols-4 gap-[20px] items-center py-[10px] justify-between">
+      <div className="grid mobile:grid-cols-3 tablet:grid-cols-4 desktop:grid-cols-4 gap-[20px] items-center py-[10px] justify-between">
         {
           displayedSkillsList.map((skill, index) => {
             return (

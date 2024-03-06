@@ -1,3 +1,5 @@
+import myspace from '../assets/images/myspace.png';
+
 function NavBar() {
   const menuItems = [
     {
@@ -61,14 +63,15 @@ function NavBar() {
       link: null
     }
   ];
-
-  const condensedMenuItems = menuItems.slice(0, 8);
   
   return (
     <nav className="w-[100%]">
-      <div className="h-[64px] bg-dark-blue"></div>
+      <div className="flex items-center h-[64px] bg-dark-blue">
+        <img className="pl-[20px] h-[40px]" src={myspace} />
+        <h1 className="text-2xl font-medium text-white">Inspired by myspace</h1>
+      </div>
       <div className="h-[32px] bg-main-blue">
-        <div className="mobile:hidden tablet:hidden desktop:flex justify-center gap-[5px]">
+        {/* <div className="flex justify-center gap-[5px]">
           {
             menuItems.map((item, index) => {
               return (
@@ -81,21 +84,7 @@ function NavBar() {
               )
             })
           }
-        </div>
-        <div className="mobile:flex tablet:flex desktop:hidden justify-center gap-[5px]">
-          {
-            condensedMenuItems.map((item, index) => {
-              return (
-                <div key={index} className="flex gap-[5px]">
-                  <span className={`text-white ${item.link ? 'cursor-pointer' : ''}`}>{item.name}</span>
-                  {index !== condensedMenuItems.length - 1 &&
-                    <span>|</span>
-                  }
-                </div>
-              )
-            })
-          }
-        </div>
+        </div> */}
       </div>
     </nav>
   )

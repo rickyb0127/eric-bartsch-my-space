@@ -4,7 +4,7 @@
 
 :root {
   --light-gray: rgb(223, 223, 223);
-  --dark-blue: rgb(2, 26, 137);
+  --dark-blue: rgb(0, 52, 194);
   --main-blue: rgb(102, 152, 203);
   --light-blue: rgb(177, 208, 240);
   --lightest-blue: rgb(210, 228, 245);
@@ -14,7 +14,8 @@
   --black: rgb(0, 0, 0);
 }
 
-body {
+html, body {
   background-color: var(--light-gray);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
 }

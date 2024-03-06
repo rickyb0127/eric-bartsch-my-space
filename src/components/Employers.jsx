@@ -29,7 +29,7 @@ function Employers() {
         {
           employersList.map((employer, index) => {
             return (
-              <div key={index} className="flex flex-row h-[160px] gap-[5px] pb-[5px]">
+              <div key={index} className="flex flex-row min-h-[160px] gap-[5px] pb-[5px]">
                 <div className="flex flex-col text-center items-center bg-dark-orange w-[30%] p-[5px]">
                   <div className="text-dark-blue font-bold">{employer.name}</div>
                   <div>{employer.jobTitle}</div>
